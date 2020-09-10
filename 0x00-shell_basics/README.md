@@ -1,4 +1,4 @@
-#0x00-shell_basics
+0x00-shell_basics
 
-##Intro
+Intro
 First Project
