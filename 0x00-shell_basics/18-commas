@@ -1,2 +1,2 @@
 !#/bin/bash
-ls -ma --group-directories-first
+ls -mad
