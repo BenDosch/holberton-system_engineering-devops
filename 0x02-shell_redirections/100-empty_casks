@@ -1,2 +1,2 @@
-#!/bin/bash
-find . -print -empty | rev | cat -d -f1 | rev
+A#!/bin/bash
+find . -print -empty | rev | cat -d "/" -f1 | rev
