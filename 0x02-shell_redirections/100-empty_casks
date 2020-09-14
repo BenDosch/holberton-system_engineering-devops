@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -print -empty
+find . -print -empty | rev | cat -d -f1 | rev
