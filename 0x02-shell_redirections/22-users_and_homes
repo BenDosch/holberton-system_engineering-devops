@@ -1,3 +1,3 @@
 #!/bin/bash
-grep :x: /etc/passwd
+grep ":x:" /etc/passwd
 
