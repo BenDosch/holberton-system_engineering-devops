@@ -1,4 +1,4 @@
 #!/bin/bash
-echo $PATH | tr ":" "\n" | grep . --count
+echo $PATH | tr ":" "\n" | wc -l
 
 
