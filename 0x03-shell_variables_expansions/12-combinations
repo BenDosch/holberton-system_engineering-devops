@@ -1,0 +1,2 @@
+#!/bin/bashaa
+echo {a..z}{a..z} | tr " " "\n" | grep --invert-match "oo"
