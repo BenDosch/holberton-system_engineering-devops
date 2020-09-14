@@ -1,2 +1,2 @@
-A#!/bin/bash
+#!/bin/bash
 find . -empty | rev | cat -d "/" -f1 | rev
