@@ -1,2 +1,2 @@
 #!/bin/bash
-printf $((16#$DECIMAL))\n
+printf "$((16#$DECIMAL))\n"
