@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Prints 0-12 hours with 0-59 minutes
 HOURS=12
 MINUTES=59
 i=0

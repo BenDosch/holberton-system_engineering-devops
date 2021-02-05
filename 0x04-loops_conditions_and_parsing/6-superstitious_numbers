@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#prints "Holberton School" 10 times. Replaces bad luck numbers from countries
 LIMIT=20
 i=1
 

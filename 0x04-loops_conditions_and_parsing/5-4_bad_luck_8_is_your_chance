@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Prints "Holberton School" 10 times. Replaces lucky and unlucky numbers.
 LIMIT=10
 i=1
 

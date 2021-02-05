@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Prints "Holberton School" 10 times, repaces the 9th with "Hi"
 LIMIT=10
 i=1
 
