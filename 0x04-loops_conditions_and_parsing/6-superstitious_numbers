@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
-#prints "Holberton School" 10 times. Replaces bad luck numbers from countries
+#prints "Holberton School" 10 times. Notes bad luck numbers from countries
 LIMIT=20
 i=1
 
 while [ $i -le $LIMIT ]
 do
+    echo $i
     case $i in
 
 	4)
@@ -15,9 +16,6 @@ do
 	    ;;
 	17)
 	    echo "bad luck from Italy"
-	    ;;
-	*)
-	    echo $i
 	    ;;
     esac
     let "i+=1"
