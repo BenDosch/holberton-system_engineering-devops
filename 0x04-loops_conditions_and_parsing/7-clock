@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+HOURS=12
+MINUTES=59
+i=0
+j=0
+
+while [ $i -le $HOURS ]
+do
+    echo "Hour: $i"
+    while [ $j -le $MINUTES ]
+    do
+	echo $j
+	let "j+=1"
+    done
+    let "j=0"
+    let "i+=1"
+done

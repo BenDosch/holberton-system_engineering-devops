@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+LIMIT=10
+i=1
+
+while [ $i -le $LIMIT ]
+do
+    echo "Holberton School"
+    let "i+=1"
+done
