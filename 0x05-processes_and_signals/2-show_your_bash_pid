@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Bash scrip that only the output of 1-list_your_processes that contin bash
+# shellcheck disable=SC2009
+ps -eaxuf | grep bash
