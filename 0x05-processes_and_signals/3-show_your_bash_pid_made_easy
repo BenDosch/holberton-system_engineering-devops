@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Bash scrip displays the process ide and name of processes containing bash
+pgrep -l bash
