@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#Bash script that prints a message infinately and another for SIGTERM
+
+trap "echo I am invincible!!!" SIGTERM
+for((n=1; n<=2; n+=0))
+{
+    echo "To infinity and beyond"
+    sleep 2
+}
