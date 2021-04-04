@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#logs into server
+ssh ubuntu@35.196.75.2 -i ~/.ssh/holberton
