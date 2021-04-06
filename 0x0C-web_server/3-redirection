@@ -5,6 +5,5 @@ sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
 sudo touch /var/www/html/index.html
 echo "Holberton School" | sudo tee /var/www/html/index.html
-new="server_name bendosch.tech;\n\tlocation \/ {\n\t\t#redirect task\n\t\treturn 301 http:\/\/www.google.com;\n\t}\n"
-sudo sed -i 's/server_name _;/$new/' /etc/nginx/sites-available/default
+sudo sed -i 's/server_name _;/server_name bendosch.tech;\n\tlocation \/ {\n\t\t#redirect task\n\t\treturn 301 http:\/\/www.google.com;\n\t}\n/' /etc/nginx/sites-available/default
 sudo service nginx restart
