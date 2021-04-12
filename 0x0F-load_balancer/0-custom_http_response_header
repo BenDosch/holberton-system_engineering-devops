@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Sets up stuff for nginx servers
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo touch /var/www/html/index.html
+sudo touch /var/www/html/error404.html
+echo "Holberton School" | sudo tee /var/www/html/index.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/error404.html
+err404="\terror_page 404 \/error404.html;\n\tlocation = \/error404.html {\n\t\tinternal;\n\t}"
+new="server_name bendosch.tech;\n\tlocation \/redirect_me {\n\t\treturn 301 https:\/\/www.youtube.com\/watch\\?v=QH2-TGUlwu4;\n\t}"
+sudo sed -i "s/server_name _;/$both/" /etc/nginx/sites-enabled/default
+header="add_header X-Served-By $(hostname);"
+sudo sed -i "62 a $header" /etc/nginx/nginx.conf
+sudo service nginx restart
