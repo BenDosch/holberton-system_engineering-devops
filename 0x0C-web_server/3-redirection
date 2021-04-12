@@ -5,6 +5,6 @@ sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
 sudo touch /var/www/html/index.html
 echo "Holberton School" | sudo tee /var/www/html/index.html
-string="server_name aydentownsley.tech;\n\tlocation \/redirect_me {\n\t\treturn 301 https:\/\/www.youtube.com\/watch\?v=QH2-TGUlwu4;\n\t}"
-sudo sed -i "s/server_name _;/$string/" /etc/nginx/sites-available/default
+new="server_name bendosch.tech;\n\tlocation \/redirect_me {\n\t\t#redirect task\n\t\t\treturn 301 www.youtube.com\/watch\?v=QH2-TGUlwu4;\n\t}\n"
+sudo sed -i 's/server_name _;/$new/' /etc/nginx/sites-available/default
 sudo service nginx restart
