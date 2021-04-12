@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Script that installs and configures nginx on your web-01 server
 sudo apt-get update
-sudo apt-get -y upgrade
 sudo apt-get -y install nginx
 sudo touch /var/www/html/index.html
 sudo touch /var/www/html/error404.html
