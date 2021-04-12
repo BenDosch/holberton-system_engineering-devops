@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Script that installs and configures nginx on your web-01 server
-sudo apt update
-sudo apt -y install nginx
+sudo apt-get update
+sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
 sudo touch /var/www/html/index.html
-echo "Holberton School" | sudo tee /var/www/html/index.html
+echo "Holberton School" > /var/www/html/index.html
 new="server_name bendosch.tech;\n\tlocation \/redirect_me {\n\t\t#redirect task\n\t\t\treturn 301 http:\/\/www.google.com;\n\t}\n"
 sudo sed -i 's/server_name _;/$new/' /etc/nginx/sites-available/default
 sudo service nginx restart
