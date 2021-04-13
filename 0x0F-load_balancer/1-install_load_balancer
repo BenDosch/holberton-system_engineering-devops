@@ -1,2 +1,18 @@
 #!/usr/bin/env bash
-# Script that
+# Script that installs and configures HAproxy
+sudo apt update
+sudo apt install -y haproxy=1.6.\*
+echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
+config="
+frontend http
+    bind *:80
+    mode http
+    default_backend webservers
+
+backend webservers
+    balance roundrobin
+    mode http
+    server 2310-web-01 35.196.75.2:80 check
+    server 2310-web-02 52.91.170.7:80 check"
+echo "$config" | sudo tee -a /etc/haproxy/haproxy.cfg
+service haproxy restart
