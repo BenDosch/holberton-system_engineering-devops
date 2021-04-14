@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+cp sites-available/default sites-enabled/default
+sudo service nginx restart
