@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+# copies sites avalible into sites enabled
 cp sites-available/default sites-enabled/default
 sudo service nginx restart
