@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Uses mysqldump to create a backup
+mysqldump -u root -p --opt --all-databases > backup.sql
+now=$(date +"%d-%m-%Y")
