@@ -5,6 +5,7 @@ CREATE USER IF NOT EXISTS 'holberton_user'@'localhost';
 SET PASSWORD FOR 'holberton_user'@'localhost' = 'projectcorrection280hbtn';
 -- Query that grants privilages to the user.
 GRANT REPLICATION CLIENT ON *.* TO 'holberton_user'@'localhost';
+GRANT SELECT ON *.* TO 'holberton_user'@'localhost';
 -- Shows grants for the user
 FLUSH PRIVILEGES;
 SHOW GRANTS FOR 'holberton_user'@'localhost';
@@ -29,16 +30,16 @@ name VARCHAR(256)
 );
 -- Querry to inserts a new row in the table "nexus6" of database provided.
 INSERT INTO nexus6 (id, name) VALUES (1, "Leon");
+-- Lock tables
+FLUSH TABLES WITH READ LOCK;
 
-
--- mysql> SHOW MASTER STATUS;
+SHOW MASTER STATUS;
 -- +------------------+----------+--------------+------------------+-------------------+
 -- | File             | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
 -- +------------------+----------+--------------+------------------+-------------------+
--- | mysql-bin.000080 |     3327 | tyrell_corp  |                  |                   |
+-- | mysql-bin.000090 |     1674 | tyrell_corp  |                  |                   |
 -- +------------------+----------+--------------+------------------+-------------------+
 -- 1 row in set (0.00 sec)
 CHANGE MASTER TO MASTER_HOST='35.196.75.2', MASTER_USER='replica_user',
-MASTER_PASSWORD='replica',
-MASTER_LOG_FILE='mysql-bin.000080',
-MASTER_LOG_POS=3327;
+MASTER_PASSWORD='replica', MASTER_LOG_FILE='mysql-bin.000090', MASTER_LOG_POS=1674;
+STOP SLAVE; START SLAVE; SHOW SLAVE STATUS\G;
