@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Script that fixes and runs nginx as user nginx
+
+sudo chown -R nginx:nginx /etc/nginx/nginx.conf
+sudo chmod -R u+r /etc/nginx/nginx.conf
+sudo sed -i 's|80|8080|' /etc/nginx/sites-available/default
+sudo pkill apache2
+sudo -u nginx service nginx restart

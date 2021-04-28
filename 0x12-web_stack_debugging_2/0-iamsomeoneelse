@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Script that runs whoami for passed user
+
+sudo -u "$1" whoami
