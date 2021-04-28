@@ -38,3 +38,7 @@ INSERT INTO nexus6 (id, name) VALUES (1, "Leon");
 -- | mysql-bin.000080 |     3327 | tyrell_corp  |                  |                   |
 -- +------------------+----------+--------------+------------------+-------------------+
 -- 1 row in set (0.00 sec)
+CHANGE MASTER TO MASTER_HOST='35.196.75.2', MASTER_USER='replica_user',
+MASTER_PASSWORD='replica',
+MASTER_LOG_FILE='mysql-bin.000080',
+MASTER_LOG_POS=3327;
