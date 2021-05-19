@@ -25,8 +25,7 @@ def top_ten(subreddit):
         return
     about_json = requests.get(sub_url + "/hot.json",
                               headers=headers,
-                              params=params,
-                              allow_redirects=False)
+                              params=params)
     hot = about_json.json()['data']['children']
     for item in hot:
         print(item['data']['title'])

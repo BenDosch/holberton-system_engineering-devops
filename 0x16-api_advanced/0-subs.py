@@ -39,8 +39,7 @@ def number_of_subscribers(subreddit):
     if subereddit_test.status_code is not 200:
         return (0)
     about_json = requests.get(sub_url + "/about.json",
-                              headers=headers,
-                              allow_redirects=False)
+                              headers=headers)
     subscribers = about_json.json()['data']['subscribers']
     return (subscribers)
 
